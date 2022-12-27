@@ -20,7 +20,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="right">
-                <p>This is me! Please contact me if you have a project or position you would like to discuss.</p>
+                <p>Please contact me if there is a project you would like to discuss.</p>
                 <div className="social">
                 <FaLinkedin size={30} style={{ color: "#fff", marginRight: "2rem" }} />
                 </div>
