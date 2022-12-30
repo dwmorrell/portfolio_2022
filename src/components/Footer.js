@@ -22,7 +22,7 @@ const Footer = () => {
             <div className="right">
                 <p>Please contact me if there is a project you would like to discuss.</p>
                 <div className="social">
-                <FaLinkedin size={30} style={{ color: "#fff", marginRight: "2rem" }} />
+                <a href="https://www.linkedin.com/in/davis-morrell/"><FaLinkedin size={30} style={{ color: "#fff", marginRight: "2rem" }} /></a>
                 </div>
             </div>
         </div>
