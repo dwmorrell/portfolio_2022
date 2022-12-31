@@ -2,15 +2,15 @@ import "./FormStyles.css";
 //import ErrorAlert from "../error/ErrorAlert.js";
 import React, { useState } from 'react';
 import { send } from 'emailjs-com';
+import { useNavigate } from 'react-router-dom';
 
 const Form = () => {
 
-
+  const navigate = useNavigate();
  // const[error, setError] = useState(null);
   const [information, setInformation] = useState({
         from_name: "",
         to_name: "Davis Morrell",
-        message: "",
         reply_to: "",
       });
 
@@ -24,12 +24,13 @@ const Form = () => {
 		event.preventDefault();
     await send(
           'service_uhh49sl',
-          'template_i3yyp3a',
+          'template_2wdkvxj',
           information,
           '7cdh1gjh31qhVnpYI'
         )
       .then((response) => {
         console.log("Success!", response.status, response.text);
+        navigate('/projects');
       })
       .catch((error) => {
           console.log("Failed...", error)
@@ -73,8 +74,10 @@ const Form = () => {
             <label>Message</label>
             <textarea 
               rows="6" 
+              name="message"
               placeholder="Type your message here" 
               onChange={handleChange}
+              value={information.message}            
               
             />
             <button className="btn">Submit</button>
